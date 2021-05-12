@@ -31,7 +31,7 @@ dfprova17 = df17[::6]
 dfprova17 = dfprova17[[labels[1], labels[2], labels[3], labels[4], labels[5], labels[6], labels[7], labels[8], labels[10]]]
 
 app = dash.Dash(__name__)
-
+server=app.server
 tab1_content=[html.Div([
     dbc.Row(dbc.Col(html.H2("   Features"),
                     # width={"offset":1}
