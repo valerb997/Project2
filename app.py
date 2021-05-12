@@ -31,7 +31,7 @@ dfprova17 = df17[::6]
 dfprova17 = dfprova17[[labels[1], labels[2], labels[3], labels[4], labels[5], labels[6], labels[7], labels[8], labels[10]]]
 
 app = dash.Dash(__name__)
-server=app.server
+
 tab1_content=[html.Div([
     dbc.Row(dbc.Col(html.H2("   Features"),
                     # width={"offset":1}
@@ -52,8 +52,8 @@ tab1_content=[html.Div([
                                               ],
                                   value=labels[3],
                                   searchable=True),
-                        width={'size': 3, "offset": 2, 'order': 1}
-                        ),]),
+                        width={'size': 3, 'order': 1}
+                        ),
 # dbc.Row([dbc.Label("Custom month"),
 #         dbc.Checklist(
 #             options=[
@@ -63,7 +63,6 @@ tab1_content=[html.Div([
 #             id="switches-input",
 #             switch=True,
 #         )]),
-dbc.Row([
 dbc.Col(dcc.Dropdown(id='sm_dropdown', placeholder='Starting month',
                                      options=[{'label': month[0], 'value': 0},
                                               {'label': month[1], 'value': 1},
@@ -79,7 +78,7 @@ dbc.Col(dcc.Dropdown(id='sm_dropdown', placeholder='Starting month',
                                               {'label': month[11], 'value': 11},
                                               ],
                                   searchable=True),
-                        width={'size': 3, "offset": 1, 'order': 2}
+                        width={'size': 3,'order': 2}
                         ),
 # dbc.Col(dcc.Dropdown(id='sd_dropdown', placeholder='Starting month',
 #                                      options=[{'label': day[0], 'value': day[0]},
@@ -133,7 +132,7 @@ dbc.Col(dcc.Dropdown(id='fm_dropdown', placeholder='Finishing month',
                                               {'label': month[11], 'value': 11},
                                               ],
                                   searchable=True),
-                        width={'size': 3, "offset": 1, 'order': 3}
+                        width={'size': 3, 'order': 3}
                         ),
             ]),
     dbc.Row(dbc.Col(
