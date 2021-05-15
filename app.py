@@ -231,11 +231,11 @@ tab2_content= html.Div([
 )
     )),
     dbc.Row([html.H3("1) Test values and model values")]),
-    dbc.Row([html.H5("Down below the test and model values are shown together to evaluate the overlapping")]),
+    dbc.Row([html.H5("Here the test and model values are shown together to evaluate the overlapping")]),
     dbc.Row([
         dbc.Col(dcc.Graph(id='the_graph1'))]),
     dbc.Row([html.H3("2) Test values vs model values")]),
-    dbc.Row([html.H5("Down below the test values are the x while the y values are the x: the more the plot follows a straight line the better is the model")]),
+    dbc.Row([html.H5("Here the test values are the x while the predicted values are the y: the more the plot follows a straight line the better is the model")]),
     dbc.Row([dbc.Col(dcc.Graph(id="the_graph2"))]),
     dbc.Row([html.H3("3) Error table")]),
     dbc.Row(dbc.Col(dbc.Table.from_dataframe(dferr18.iloc[:, 1:], striped=True, bordered=True, responsive=True))
